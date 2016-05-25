@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Labb_4_Uppgift_2.Models.Grade>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Grades</h3>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseGrade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.GradeID}) |
+                @Html.ActionLink("Details", "Details", new {id = item.GradeID}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.GradeID})
+            </td>
+        </tr>
+    }
+
+</table>
+
+@*<div>
+    @Html.Action("Create", "Grades")
+</div>*@

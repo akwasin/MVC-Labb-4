@@ -1,0 +1,36 @@
+﻿@using KKGGames_Labb2.Models
+@model KKGGames_Labb2.Models.TicTacToeModel
+@{
+    ViewBag.Title = "Tic Tac Toe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tic Tac Toe</h2>
+
+@using (Html.BeginForm("Index", "TicTacToe", FormMethod.Post))
+{
+    <table>
+        @for (int y = 0; y < Model.CellBoard.Length; y++)
+        {
+        <tr>
+            @for (int x = 0; x < Model.CellBoard[y].Length; x++)
+            {
+                if (Model.CellBoard[x][y] == Cell.Computer)
+                {
+                    <td><button type="submit" name="chosenCell" value="@x,@y" style="background-color: red; border: 1px solid black; width: 40px; height: 40px"> </button></td>
+                }
+                else if (Model.CellBoard[x][y] == Cell.Player)
+                {
+                    <td><button type="submit" name="chosenCell" value="@x,@y" style="background-color: blue; border: 1px solid black; width: 40px; height: 40px"> </button></td>
+                }
+                else
+                {
+                    <td><button type="submit" name="chosenCell" value="@x,@y" style="background-color: white; border: 1px solid black; width: 40px; height: 40px"> </button></td>
+                }
+            }
+        </tr>
+        }
+    </table>
+}
+
+<p>@Html.ActionLink("Go back to menu.", "Index", "Home")</p>

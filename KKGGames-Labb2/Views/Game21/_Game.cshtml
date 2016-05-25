@@ -1,0 +1,22 @@
+﻿@model KKGGames_Labb2.Models.Game21Model
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}
+
+@using (Ajax.BeginForm("_Game", new AjaxOptions { UpdateTargetId = "gameContainer", InsertionMode = InsertionMode.Replace }))
+{
+    @Html.HiddenFor(m => m.CurrentValue);
+    <h3>Current number: @Html.DisplayTextFor(m => m.CurrentValue)</h3>
+    if (Model.ComputersChoice != null)
+    {
+        <h4>Computer's choice: @Html.DisplayTextFor(m => m.ComputersChoice)</h4>
+    }
+    @Html.HiddenFor(m => m.ComputersChoice);
+    <label for="numberOne">1</label>
+    @Html.RadioButtonFor(m => m.ChoosenNumber, "1", new { id = "numberOne", required = true })
+    <label for="numberTwo">2</label>
+        @Html.RadioButtonFor(m => m.ChoosenNumber, "2", new { id = "numberTwo", required = true })
+        <input type="submit" value="Send" />
+}
