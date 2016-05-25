@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb-4", "KKGGames-Labb2\Labb-4.csproj", "{EBF740BE-8307-4FDC-A284-E6ABDD1ED6EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb-4-Uppgift-2", "Labb-4-Uppgift-2\Labb-4-Uppgift-2.csproj", "{6313B351-A288-4243-B71B-5DFE1B225A8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC Labb 4", "MVC Labb 4\MVC Labb 4.csproj", "{9230D1F0-B48A-498C-93CB-FB3B41C1F09B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF740BE-8307-4FDC-A284-E6ABDD1ED6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF740BE-8307-4FDC-A284-E6ABDD1ED6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF740BE-8307-4FDC-A284-E6ABDD1ED6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF740BE-8307-4FDC-A284-E6ABDD1ED6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6313B351-A288-4243-B71B-5DFE1B225A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6313B351-A288-4243-B71B-5DFE1B225A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6313B351-A288-4243-B71B-5DFE1B225A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6313B351-A288-4243-B71B-5DFE1B225A8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9230D1F0-B48A-498C-93CB-FB3B41C1F09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9230D1F0-B48A-498C-93CB-FB3B41C1F09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9230D1F0-B48A-498C-93CB-FB3B41C1F09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9230D1F0-B48A-498C-93CB-FB3B41C1F09B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
